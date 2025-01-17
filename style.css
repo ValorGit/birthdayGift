@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+    font-family: "Send Flowers", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
     height: 100vh;
     width: 100vw;
 	overflow: hidden;
-	background: #157145;
+	background: #BB7E8C;
 }
 
 .flipbook {
@@ -22,21 +24,23 @@ body {
 }
 
 .flipbook .hard {
-    background: #F283B6 !important;
+    background: #F5A3C8 !important;
     color: #fff;
     font-weight: bold;
-    border: none; 
+    border: none;
+    font-size: 22px; 
 }
 
 .flipbook .hard small{
 	font-style: italic;
 	font-weight: lighter;
+    color: #131B23;
 	opacity: 0.7;
 	font-size: 14px;
 }
 
 .flipbook .page {
-    background: white;
+    background: #FCF7F8;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
