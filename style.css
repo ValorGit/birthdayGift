@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Send+Flowers&display=swap');
 
 *{
     margin: 0;
@@ -7,15 +8,36 @@
     font-family: "Send Flowers", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 22px;
 }
 
+.chewy-regular {
+    font-family: "Chewy", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
 body {
     display: grid;
     place-content: center;
     height: 100vh;
     width: 100vw;
 	overflow: hidden;
-	background: #BB7E8C;
+	background: #c4deb7;
 }
 
 .flipbook {
@@ -24,20 +46,33 @@ body {
 }
 
 .flipbook .hard {
-    background: #F5A3C8 !important;
+    background: #245c43 !important;
     color: #fff;
     font-weight: bold;
     border: none;
-    font-size: 22px; 
+    font-size: 32px; 
 }
 
 .flipbook .hard small{
-	font-style: italic;
-	font-weight: lighter;
-    color: #131B23;
-	opacity: 0.7;
-	font-size: 14px;
+    font-family: "Chewy", serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-wrap: wrap;
+    color: #FCF7F8;
 }
+
+/* .flipbook .hard:before{
+    content: "";
+    position: relative;
+    background-color: #ffccd5;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 160px;
+    left: -40px;
+    box-shadow: 60px 20px #ffccd5, 130px 10px #ffccd5, 190px 20px #ffccd5, 260px -5px #ffccd5, 340px 20px #ffccd5,;
+    } */
+
 
 .flipbook .page {
     background: #FCF7F8;
@@ -49,14 +84,133 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.11);
 }
 
+.flipbook .hard p{
+    font-size: 33px;
+    margin-bottom: 40px;
+
+}
+
+.flipbook .story p{
+    font-size: 40px;
+    text-align: center;
+    margin: 10%;
+}
+
+ .flipbook .space{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+/* Stars */
+.flipbook .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.flipbook .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+.flipbook .star:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.flipbook .star:nth-child(2) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.flipbook .star:nth-child(3) {
+    top: 50%;
+    left: 40%;
+    animation-delay: 0.5s;
+}
+
+.flipbook .star:nth-child(4) {
+    top: 80%;
+    left: 60%;
+    animation-delay: 1.5s;
+}
+
+.flipbook .star:nth-child(5) {
+    top: 20%;
+    left: 90%;
+    animation-delay: 0.2s;
+}
+
+.flipbook .star:nth-child(6) {
+    top: 40%;
+    left: 10%;
+    animation-delay: 0.8s;
+}
+
+.flipbook .star:nth-child(7) {
+    top: 70%;
+    left: 30%;
+    animation-delay: 0.3s;
+}
+
+.flipbook .star:nth-child(8) {
+    top: 90%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .page img{
 	width: 70%;
-	object-fit: cover;
+    height: auto;
+    max-height: 400px;
+	object-fit: contain;
 	margin: auto;
+
+}
+
+.page .profile img{
+	width: 70%;
+    height: auto;
+    max-height: 500px;
+	object-fit: contain;
+	margin: auto;
+
 }
 
 .flipbook .page small{
-	font-size: 14px;
+	font-size: 16px;
     margin-bottom: 10px;
+    object-fit: contain;
+    font-family: "Chewy", serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-wrap: wrap;
+}
+
+.flipbook .hard img{
+	width: 70%;
+    height: auto;
+    max-height: 400px;
+	object-fit: contain;
+	margin-bottom: 10%;
+
 }
 
