@@ -96,6 +96,12 @@ body {
     margin: 10%;
 }
 
+.flipbook .story small{
+    font-size: 20px;
+    text-align: center;
+    margin: 10%;
+}
+
  .flipbook .space{
     width: 100%;
     height: 100%;
@@ -168,6 +174,19 @@ body {
     animation-delay: 1s;
 }
 
+.flipbook .star:nth-child(9) {
+    top: 70%;
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.flipbook .star:nth-child(9) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 0.5s;
+}
+
+
 @keyframes twinkle {
     0% {
         opacity: 0.5;
@@ -213,4 +232,59 @@ body {
 	margin-bottom: 10%;
 
 }
+
+.flipbook .gallery {
+    --s: 150px; /* control the size */
+    --g: 10px;  /* control the gap */
+    display: grid;
+    /* margin: calc(var(--s) + var(--g)); */
+  }
+  
+  .flipbook .gallery > img {
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 1.15;
+    object-fit: cover;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%,75% 100%,25% 100%,0 50%);
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    filter: grayscale(80%);
+    transition: .2s linear;
+  }
+  .flipbook .gallery > img:hover {
+    filter: grayscale(0);
+    z-index: 1;
+    --_t: 1.2;
+  }
+  a:link {
+    color: white;
+    font-size: 60px;
+  }
+
+  /* visited link */
+a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+  
+  .flipbook .gallery > img:nth-child(1) {--_y: calc(-100% - var(--g))}
+  .flipbook .gallery > img:nth-child(7) {--_y: calc( 100% + var(--g))}
+  .flipbook .gallery > img:nth-child(3),
+  .flipbook .gallery > img:nth-child(5) {--_x: calc(-75% - .87*var(--g))}
+  .flipbook .gallery > img:nth-child(4),
+  .flipbook .gallery > img:nth-child(6) {--_x: calc( 75% + .87*var(--g))}
+  .flipbook .gallery > img:nth-child(3),
+  .flipbook .gallery > img:nth-child(4) {--_y: calc(-50% - .5*var(--g))}
+  .flipbook .gallery > img:nth-child(5), 
+  .flipbook .gallery > img:nth-child(6) {--_y: calc( 50% + .5*var(--g))}
+  
 
